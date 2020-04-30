@@ -15,7 +15,7 @@ do{
 
 
 }
-while( count<=4 && attemt!=attempt)
+while( count<=4 && attempt2!=attempt)
 if (count<=4){
     alert('Ласкаво просимо')
 }
