@@ -1,9 +1,9 @@
 
 let ask = prompt('Введіть логін, будь ласка');
 let count = 1;
-let prom='login';
-let proms;
-if (ask==prom){
+let attempt='login';
+let attempt2;
+if (ask==attempt){
    alert('Запрошуємо на сайт');
 }
 else {
@@ -11,11 +11,11 @@ else {
 do{
    
    count++;
-   proms=prompt('Спробуйте ще раз')
+   attempt2=prompt('Спробуйте ще раз')
 
 
 }
-while( count<=4 && proms!=prom )
+while( count<=4 && attemt!=attempt)
 if (count<=4){
     alert('Ласкаво просимо')
 }
