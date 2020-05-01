@@ -2,7 +2,7 @@
 //     console.log(Math.max(arguments.length))
 // }
 function maxIn(){
-    let max=-111111;
+    let max=-infinity;
      for (let i=0; i<arguments.length; i++){
          if (arguments[i]>max){
              max=arguments[i];
