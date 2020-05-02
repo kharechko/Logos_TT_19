@@ -1,12 +1,11 @@
-let primaryNum=()=>{
- let num1=+prompt('Please enter a value for number one');
- let num2=+prompt('Please enter a value for number two')
- for (let i=num1; i<=num2; i++){
-    if(i%2!=0 && i%3!=0 && i!=1){
-        console.log(i)
+let start=+prompt('Please enter a value for number one');
+ let end=+prompt('Please enter a value for number two')
+for (let i=start; i<=end; i++){
+    let count =0;
+    for (let j=2; j<i; j++){
+        if(i%j){continue;}
+        count+=1;
+
     }
-    else{
-    }
- }
+    if (!count) console.log(i)
 }
-primaryNum()
