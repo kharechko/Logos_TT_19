@@ -1,5 +1,5 @@
-let start=+prompt('Please enter a value for number one');
- let end=+prompt('Please enter a value for number two')
+
+let arePrime=(start, end)=>{
 for (let i=start; i<=end; i++){
     let count =0;
     for (let j=2; j<i; j++){
@@ -9,3 +9,7 @@ for (let i=start; i<=end; i++){
     }
     if (!count) console.log(i)
 }
+}
+let start=+prompt('Please enter a value for number one');
+ let end=+prompt('Please enter a value for number two');
+arePrime(start, end);
