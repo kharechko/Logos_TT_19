@@ -1,9 +1,7 @@
 
- getDigits = function(number) {
-
-
-    number = Math.abs(parseFloat(number));
-     let n = parseInt(number);
-     return console.log(Number((number - n).toFixed(Math.abs((""+number).length - (""+n).length - 1))));
+getDecimal = function(x) {
+     let n = parseInt(x);
+     return console.log(((x - n).toFixed((""+x).length - (""+n).length-1 )));
  }
- getDigits(22.5)
+
+ getDecimal(67.897)
