@@ -6,9 +6,9 @@ let getAddress = (str) =>{
    let _f = 'http://';
    let _s = 'https://';
 
-   if (str.includes(_f)) slice = str.slice(7);
+   if (str.startsWith(_f)) slice = str.slice(7);
    
-   else if (str.includes(_s)) slice = str.slice(8);
+   else if (str.startsWith(_s)) slice = str.slice(8);
 
    else slice = 'Address is not defined'
 
