@@ -4,7 +4,7 @@
 let ask = prompt('');
 
 let getCount = (str) =>{
-    
+    str = str.toLowerCase();
     let _h = 'html';
     let count = 0;
     let indOf = str.indexOf(_h);
