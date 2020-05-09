@@ -1,7 +1,7 @@
 
 let ask = prompt('');
 
-let getAddress = (str) =>{
+let getAddress = (str) => {
   
    let _f = 'http://';
    let _s = 'https://';
