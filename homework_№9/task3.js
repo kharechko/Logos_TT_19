@@ -1,17 +1,14 @@
-
-
-
 let ask = prompt('');
 
-let getCount = (str) =>{
+let getCount = (str) => {
     str = str.toLowerCase();
     let _h = 'html';
     let count = 0;
-    let indOf = str.indexOf(_h);
+    let _i = str.indexOf(_h);
     
-       while (indOf > -1){
+       while (_i > -1){
          ++count;
-         indOf = str.indexOf(_h, ++indOf);
+         _i = str.indexOf(_h, ++_i);
       }
 
      return console.log(count);
