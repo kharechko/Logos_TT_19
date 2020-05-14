@@ -24,7 +24,7 @@ let _a = document.querySelectorAll('p>a');
 for (let i = 0; i < 3; i++) {
 
     let colorLink = prompt('Введіть, будь ласка, колір тексту посилання');
-    let text = prompt('');
+     let text = prompt('Введіть, будь ласка, текст');
         _a[i].innerText = text;
         _a[i].style.color = colorLink;
         _a[i].style.textDecoration = 'none';
