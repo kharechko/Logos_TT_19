@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightgrey;
+}
+
+#keyboard{
+    position: absolute;
+     left: 12.5%;
+     top: 20%;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    flex-wrap: wrap;
+    height: 500px;
+    justify-content: space-between;
+    background-color: transparent;
+
+}
+
+textarea{
+    width: 100%;
+    border-radius: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
