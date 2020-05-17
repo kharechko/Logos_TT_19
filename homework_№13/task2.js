@@ -8,20 +8,10 @@ let keyboard = document.getElementById('keyboard');
 
 for(let i = 0; i < letters.length; i++){
  block = document.createElement('button');
- block.style.background = 'white';
- block.style.lineHeight = '65px';
- block.style.width = '60px';
- block.style.height = '65px';
- block.style.fontSize = '16px';
- block.style.border = 'none';
- block.innerHTML = letters[i];
- block.style.borderRadius = '10px'
- block.style.marginBottom = '10px'
+ block.classList.add('button');
+ block.innerText = letters[i];
  keyboard.appendChild(block);
- block.style.textAlign = 'center';
-block.style.verticalAlign = 'middle';
-block.style.outline = 'none';
-block.classList.add('k_l');
+ block.classList.add('k_l');
 }
 let keyboard__keys = document.getElementsByClassName('k_l');
 
@@ -35,43 +25,40 @@ let shft = f();
 let shft2 = f();
 let spc = f();
 
-let key__pos = (el,  w, n, text) => {
- 
-  el.style.width = w;
-  el.style.h = '80px';
-  el.style.borderRadius = '10px';
-  el.style.background = 'white';
-  el.style.fontSize = '16px';
+let key__pos = (el, n, text) => {
   el.innerText = text;
-  el.style.marginBottom = '10px'
-  el.style.border = 'none';
     return keyboard.insertBefore(el, keyboard.children[n]);
 }
 
 
-key__pos(b_s, '170px', 14, 'Backspace');
-key__pos(t_b, '150px', 15, 'Tab');
-key__pos(c_l, '170px', 29, 'CapsLock');
-key__pos(e_r, '170px',  41, 'Enter');
-key__pos(shft,'170px', 42, 'Shift')
-key__pos(shft2, '170px',  56, 'Shift');
-key__pos(spc, '100%',  57, '');
 
+b_s.classList.add('keys', 'key_w');
+t_b.classList.add('key_t', 'keys');
+c_l.classList.add('keys', 'key_w');
+e_r.classList.add('keys', 'key_w');
+shft.classList.add('keys', 'key_w');
+shft2.classList.add('keys', 'key_w');
+spc.classList.add('keys', 'key_sp');
 
-spc.style.backgroundColor = 'white';
-spc.style.padding = '30px'
+key__pos(b_s,  14, 'Backspace');
+key__pos(t_b, 15, 'Tab');
+key__pos(c_l,  29, 'CapsLock');
+key__pos(e_r,   41, 'Enter');
+key__pos(shft, 42, 'Shift')
+key__pos(shft2, 56, 'Shift');
+key__pos(spc,   57, '');
+
 keyboard.appendChild(spc, shft2);
 
+
 let children = document.querySelectorAll('button');
-
-
 
 document.addEventListener('keydown', function(event) {
 
  for(let i = 0; i < letters.length; i++){
 
       if (event.keyCode == keys[i]) {
-         keyboard__keys[i].style.background = 'lightgrey';
+         keyboard__keys[i].classList.add('press_key');
          textarea.value += event.key;
        }
      }
@@ -82,12 +69,12 @@ document.addEventListener('keydown', function(event) {
 
       for(let i = 0; i < letters.length; i++){
      
-           if (event.keyCode == keys[i])  keyboard__keys[i].style.background = 'white';
+           if (event.keyCode == keys[i])  keyboard__keys[i].classList.remove('press_key');
         }   
       })
 
 
-    let f_down = n =>   keyboard.children[n].style.background = 'lightgrey';
+    let f_down = n =>   keyboard.children[n].classList.add('press_key');
 
          document.addEventListener('keydown', function(event) {
            
@@ -97,19 +84,19 @@ document.addEventListener('keydown', function(event) {
             textarea.value = textarea.value.slice(0, textarea.value.length - 1)
             break;
             case 9:
-           f_down(14);
-           textarea.value+= '\t'
+           f_down(15);
+           textarea.value+= '  '
             break;
             case 20: 
             f_down(29);
             break;
             case 13:
             f_down(41);
-            textarea.value+= '\n'
+            textarea.value+= '\n'  
             break;
             case 32:
             f_down(54);
-            textarea.value+= '\1'
+            textarea.value+= ' '
             break;
             case 16: 
             if(event.location == 1) f_down(42);
@@ -121,7 +108,7 @@ document.addEventListener('keydown', function(event) {
 
 
 
-         f_up = n => keyboard.children[n].style.background = 'white';
+         f_up = n => keyboard.children[n].classList.remove('press_key');
 
          document.addEventListener('keyup', function(event) {
            
