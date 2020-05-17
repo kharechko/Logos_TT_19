@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       form{
+           margin-top: 100px;
+           margin-left: 100px;
+           width: 80%;
+         }
+       .inpt{
+            width: 30%;
+            height: 60px;
+          
+        }
+        .scd_inpt{
+            width: 90%;
+            height: 60px;
+        }
+     
+     </style>
+   </head>
+<body>
+    <form action="" name="move" class="frm1">    
+      <h2>Task move</h2>
+        <p>Значення переміщується з одного інпута в інший, якщо там є значення</p>
+          <input type="text" name="primary" class="inpt">
+           <input type="button" name="clk" class="inpt" value="move" style="color: white; font-size: 18px; background-color: rgb(76, 167, 76); outline-color: green;">
+            <input type="text" name= "res" class="inpt">
+       </form>
+
+    
+    <form action="" name="plc_holder">
+        <h2>Task placeholder</h2>
+        <p>Значення переміщується в placeholder тільки якщо там є значення</p>
+        <input type="text" name="scd_inpt" id="" class="scd_inpt" placeholder="">
+      </form>
+
+
+    <script src="task1.js"></script>
+</body>
+</html>
