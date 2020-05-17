@@ -3,17 +3,6 @@ let images = ['https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixli
 let box;
 let n = 0;
 
-f_mainBlk = function(box) {
-  box.style.width = '600px';
-  box.style.height = '600px';
-  box.style.background = 'red';
-  box.style.display = 'flex';
-  box.style.flexDirection = 'row';
-  box.style.flexWrap = 'wrap';
-  box.style.position = 'absolute';
-  box.style.left = 'calc(50% - 300px)';
-  }
-
 f_size = function(box) {
   box.style.width = '200px';
   box.style.height  = '200px';
@@ -27,7 +16,7 @@ f_size = function(box) {
       color.addEventListener('click', function(){
 
           let box = document.createElement('div');
-        f_mainBlk(box);
+           box.classList.add('change');
 
               for(let i = 0; i < 9; i++) {
                 sml_box = document.createElement('div');
@@ -45,15 +34,12 @@ f_size = function(box) {
               document.body.appendChild(box)
           })
 
-
-
-
           let img = document.querySelector('.img');
 
           img.addEventListener('click', function(){
 
               let box = document.createElement('div');
-              f_mainBlk(box);
+              box.classList.add('change');
               for(let i = 0; i < 9; i++) {
                   sml_box = document.createElement('div');
                   sml_box.style.background = 'url('+images[i]+')';
