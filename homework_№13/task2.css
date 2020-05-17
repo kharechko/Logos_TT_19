@@ -32,3 +32,43 @@ textarea{
     padding-top: 20px;
     margin-bottom: 10px;
 }
+
+.button{
+    background: white;
+    line-height: 65px;
+    width:  60px;
+    height: 70px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    vertical-align: middle;
+    outline: none;
+}
+
+.keys {
+    height: 70px;
+    border-radius: 10px;
+    background: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.key_w {
+    width: 170px;
+}
+
+
+.key_t {
+    width: 150px;
+}
+.key_sp {
+    width: 100%;
+}
+
+.press_key {
+    background: lightgray;
+    color: #ffffff;
+}
