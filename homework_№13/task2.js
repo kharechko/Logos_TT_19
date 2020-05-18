@@ -17,13 +17,7 @@ let keyboard__keys = document.getElementsByClassName('k_l');
 
 let f = () => document.createElement('button');
 
-let b_s = f();
-let t_b = f();
-let c_l = f();
-let e_r = f();
-let shft = f();
-let shft2 = f();
-let spc = f();
+let b_s = f(), t_b = f(), c_l = f(), e_r = f(), shft = f(), shft2 = f(), spc = f();
 
 let key__pos = (el, n, text) => {
   el.innerText = text;
