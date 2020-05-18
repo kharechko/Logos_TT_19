@@ -79,7 +79,7 @@ document.addEventListener('keydown', function(event) {
             break;
             case 9:
            f_down(15);
-           textarea.value+= '  '
+           textarea.value+= '\t'
             break;
             case 20: 
             f_down(29);
