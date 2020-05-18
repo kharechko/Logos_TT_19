@@ -47,7 +47,8 @@ let n = 0;
                   for(let i = 0; i < children1.length; i++){
                         children1[i].onclick = function(){
                         document.body.style.background = 'url('+images[i]+')';
-                       document.body.classList.add('bd')
+                        document.body.style.backgroundRepeat = 'no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                       }
                     }
                   }
