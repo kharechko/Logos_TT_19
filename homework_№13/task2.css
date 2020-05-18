@@ -54,6 +54,7 @@ textarea{
     font-size: 16px;
     margin-bottom: 10px;
     border: none;
+    outline: none;
 }
 
 .key_w {
