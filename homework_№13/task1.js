@@ -3,11 +3,6 @@ let images = ['https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixli
 let box;
 let n = 0;
 
-f_size = function(box) {
-  box.style.width = '200px';
-  box.style.height  = '200px';
-  
-}
 
 
       let color = document.querySelector('.color');
@@ -20,7 +15,7 @@ f_size = function(box) {
 
               for(let i = 0; i < 9; i++) {
                 sml_box = document.createElement('div');
-                f_size(sml_box);
+                sml_box.classList.add('box-size')
                 sml_box.style.background = colors[i];
                 box.appendChild(sml_box);
             let children = box.children;
@@ -43,7 +38,7 @@ f_size = function(box) {
               for(let i = 0; i < 9; i++) {
                   sml_box = document.createElement('div');
                   sml_box.style.background = 'url('+images[i]+')';
-                f_size(sml_box);
+                 sml_box.classList.add('box-size')
                   box.appendChild(sml_box);
                   
                   let children1 = box.children;
@@ -52,8 +47,7 @@ f_size = function(box) {
                   for(let i = 0; i < children1.length; i++){
                         children1[i].onclick = function(){
                         document.body.style.background = 'url('+images[i]+')';
-                        document.body.style.backgroundRepeat = 'no-repeat';
-                        document.body.style.backgroundSize = 'cover';
+                       document.body.classList.add('bd')
                       }
                     }
                   }
