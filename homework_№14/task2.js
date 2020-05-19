@@ -36,10 +36,9 @@ newForm.sign_up.addEventListener('click', function() {
           userBim.innerText = newForm.f_name.value + ' ' + newForm.s_name.value;
           userAddress.innerText = newForm.address.value;
           userJob.innerText =  newForm.user_job.options[newForm.user_job.selectedIndex].value;
-          userWoman.checked = false;
-          userMan.checked = true;
+
         }
-          newForm.check.checked = false;
+
      })
 
 
@@ -50,9 +49,7 @@ bottomBtn.addEventListener('click', function(){
   newForm.classList.remove('non-visible');
   userBio.classList.remove('second_page');
   userBio.classList.add('non-visible');
-  newForm.s_name.value = '';
-  newForm.f_name.value = '';
-  newForm.address.value = '';
-  sel.selected = true;
+  newForm.reset();
+
 })
 
