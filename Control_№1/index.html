@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div class=" col-10 ml-auto mt-3 rounded mr-auto p-0 main_block  bg-light" >
+     <div class="rounded  p-3 blk_contain">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+        <div class="tbl_contain"></div>
+       <div class="lst_contain"></div>
+    </div>
+  <div class="p-2 lst_tbl_section">
+    <h2>Choose what you want:</h2>
+    <input type="radio" name="tr" class="tbl_btn" checked> Table
+     <input type="radio" name="tr" class="lst_btn"> List
+ </div>
+ <form name="newTableCreate"  class="p-2  bg-light pr-3">
+    <label for="count_tr">Count TR:</label>
+    <input type="text" id="count_tr" class="col-10" name="count_tr">
+       <br>
+    <label for="count_td">Count TD:</label>
+     <input type="text" id="count_td" class="col-10" name="count_td">
+    <h6>Add style to your table:</h6>
+    <label for="td_width">Width of TD: </label>
+    <br>
+    <input type="text" id="td_width" class="col-10" name="td_width">
+        <br>
+    <label for="td_height">Height of TD: </label>
+    <br>
+    <input type="text" id="td_height" class="col-10" name="td_height">
+        <br>
+        <br>
+    <label for="td_br_width">Width of border:</label>
+    <input type="text" id="td_br_w" name="bd_width">
+    <span>Type of border:</span>
+    <select id="td_br_type" name="bd_style" class="col-1">
+         <option value="solid">Solid</option>
+         <option value="dotted">Dotted</option>
+         <option value="dashed">Dashed</option>
+         <option value="double">Double</option>
+    </select>
+    <span>Color of border:</span>
+    <select id="td_br_clr" name="bd_color" class="col-1">
+          <option value="black">Black</option>
+           <option value="green">Green</option>
+           <option value="blue">Blue</option>
+           <option value="red">Red</option>
+       </select>
+            <br>
+            <br>
+        <input  type="button" class="btn btn-success" name="tbl_btn" value="Create Table"></input>
+    </form>
+     <form action="" name="newListCreate" class="p-2 bg-light">
+        <label for="li_count_inpt">Count Li:</label>
+               <br>
+        <input type="text" id="li_count_inpt" class="col-12 p-2" name="count_li">
+       <label for="sel1">Type of marks:</label>
+       <select class="form-control" id="sel1" name="list_style">
+           <option value="circle">Circle</option>
+           <option value="disc">Disc</option>
+           <option value="square">Square</option>
+       <select>
+       <button type="button" class="btn btn-success mt-4" name="lst_btn">Create List</button>
+   </form>
+  </div>
+</div>
+ <div class="main-btns mt-5 ">
+   <button type="button" class="btn btn-warning col-0.5 center-block edit_btn">Edit</button>
+     <button type="button" class="btn btn-info col-0.5 center-block style_btn">Style</button>
+        </div>
+     <div class="bottom_blk col-10 ml-auto rounded mr-auto p-5 bg-light">
+      <div class="edit_section">
+          <textarea name="" id="" cols="30" rows="6" class="col-12 center-div-content create_input" aria-describedby="sizing-addon1">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+         </textarea>
+         <button type="button" class="btn btn-danger col-1.5 mt-4 add_btn">add</button>
+         <button type="button" class="btn btn-success col-1.5 mt-4 ml-2 save_btn">save</button>
+    </div>
+     <div class="style_section">
+         <form action="" name="newStyle"> 
+               <h6>Font Size:</h6>
+                <input type="radio" value="12px" name="f_size" class="txt_size" > 12px
+                <input type="radio" value="14px" name="f_size" class="txt_size"> 14px
+                <input type="radio" value="16px" name="f_size" class="txt_size"> 16px
+                <input type="radio" value="18px" name="f_size" class="txt_size"> 18px
+                <input type="radio" value="20px" name="f_size" class="txt_size"> 20px
+                    <br>
+                    <br>
+               <h6>Font Family:</h6>
+                <select class="form-control txt_family" id="sel1">
+                    <option value="" selected='selected' disabled>Choose option</option>
+                    <option value="Cursive">Cursive</option>
+                    <option value="Family">Fantasy</option>
+                    <option value="Monospace">Monospace</option>
+                    <option value="Sans-serif">Sans-serif</option>  
+                </select>
+                          <br>
+               <h6>Colors:</h6>
+               <button type="button" class="btn btn-secondary txt_col_btn">Color of Text</button>
+               <button type="button" class="btn btn-secondary bd_col_btn">Background color</button>
+                    <br>
+                    <br>
+                <h6>Style:</h6>
+                <input type="checkbox" class="bold_txt" value="bold"> Bold Text
+                 <input type="checkbox" class="curs_txt" value="cursive"> Cursive Text
+            </form>
+        </div>
+          <div class="color_blk"></div>
+      </div>
+  </div>
+
+
+  
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
