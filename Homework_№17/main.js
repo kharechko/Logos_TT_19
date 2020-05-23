@@ -3,7 +3,7 @@ let getSel = n => document.querySelector(n);
 
 
 let monthDay = getSel('.monthDay');
-let timeZone = getSel('.timeZone');
+let timeLine = getSel('.timeLine');
 let stil = getSel('.store');
 
 function  getDate() {
@@ -26,7 +26,7 @@ setInterval(function() {
     if(h < 10)  h = '0' + h;
     if(m < 10)  m = '0' + m;
     if(s < 10)  s = '0' + s;
-    timeZone.innerText = (`${h}:${m}:${s}`)
+    timeLine.innerText = (`${h}:${m}:${s}`)
 }, 1000)
 
 setInterval;
