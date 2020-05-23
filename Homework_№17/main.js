@@ -41,7 +41,6 @@ let timeWatch_contain = getSel('.timeWatch_contain');
 
   let  primary = 0; 
   let time = 0;
-  let h;
   let minute;
 
     function timeWatch() {
@@ -75,7 +74,7 @@ let timeWatch_contain = getSel('.timeWatch_contain');
 
                 timeWatch();
 
-            }, 100);
+            }, 10);
         }
     }
 
