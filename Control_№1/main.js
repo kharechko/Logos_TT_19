@@ -20,8 +20,6 @@ let color_blk = getSel('.color_blk');
 let main_lst_tbl = getSel('.main_lst_tbl_sec');
 let table_new = getSel('.table_new');
 let table_cr = document.createElement('table');
-let tbl_contain = getSel('.tbl_contain');
-let lst_contain = getSel('.lst_contain');
 
 deleteVis(color_blk);
 deleteVis(style_section);
@@ -30,8 +28,8 @@ deleteVis(edit_section)
 
 let edit_btn = getSel('.edit_btn');
 let save_btn = getSel('.save_btn');
-save_btn.addEventListener('click', function() {
 
+save_btn.addEventListener('click', function() {
     blk_contain.innerHTML = create_input.value;
     deleteVis(edit_section);
    
@@ -71,7 +69,6 @@ for(let i = 0; i <= 9; i++) {
    smallBox.style.height = '40px';
    smallBox.style.background = colors[i];
    color_blk.appendChild(smallBox);
-
 }
 
 let txt_col_btn = getSel('.txt_col_btn');
@@ -106,7 +103,6 @@ let bd_col_btn = getSel('.bd_col_btn')
     blk_contain.style.fontFamily = this.value;
 })
 
-
 bold_txt.addEventListener('change', function() {
     if(bold_txt.checked)  blk_contain.style.fontWeight =  this.value;
        else   blk_contain.style.fontWeight =  'initial';
@@ -125,15 +121,18 @@ bold_txt.addEventListener('change', function() {
     deleteVis( newList);
 
  })
-
-
+ save_btn.addEventListener('click', function() {
+    blk_contain.innerHTML = create_input.value;
+    deleteVis(edit_section); 
+})
 
 newTable.tbl_btn.addEventListener('click', function() {
       addVis(edit_section);
       addVis(bottom_blk);
       addVis(main_btns);
       addVis(blk_contain);
-
+      tbl_contain = document.createElement('div');
+      deleteVis(tbl_contain)
     for(let i = 0; i < newTable.count_tr.value; i++){
         tbl_row = document.createElement('tr');
 
@@ -150,6 +149,7 @@ newTable.tbl_btn.addEventListener('click', function() {
               }
           table_cr.appendChild(tbl_row)
           }
+            blk_contain.appendChild(tbl_contain)
             tbl_contain.appendChild(table_cr);
             create_input.value += tbl_contain.innerHTML;
             deleteVis(newTable);
@@ -162,8 +162,7 @@ let lst_btn = getSel('.lst_btn');
 
    lst_btn.addEventListener(('click'), function() {
        addVis(newList);
-       deleteVis(newTable);
-      
+       deleteVis(newTable);   
  })
 
     newList.lst_btn.addEventListener('click', function() {
@@ -172,6 +171,9 @@ let lst_btn = getSel('.lst_btn');
        addVis(bottom_blk);
        addVis(main_btns);
        addVis(blk_contain);
+       let lst_contain = document.createElement('div');
+       lst_contain.style.paddingLeft = '10px';
+       deleteVis(lst_contain)
         ul = document.createElement('ul');
             for(let i = 0; i < newList.count_li.value; i++) {
                   let li = document.createElement('li');
@@ -195,3 +197,4 @@ add_btn.addEventListener('click', function() {
     tbl_btn.checked = false;
     lst_btn.checked = false;
 })
+
