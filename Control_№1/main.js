@@ -17,7 +17,6 @@ let blk_contain = getSel('.blk_contain');
 let color_blk = getSel('.color_blk');
 let main_lst_tbl = getSel('.main_lst_tbl_sec');
 let table_new = getSel('.table_new');
-let table_cr = document.createElement('table');
 
 deleteVis(color_blk);
 deleteVis(style_section);
