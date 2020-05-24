@@ -108,14 +108,14 @@ let bd_col_btn = getSel('.bd_col_btn')
 
 
 bold_txt.addEventListener('change', function() {
-    if(bold_txt.checked)  main_block.style.fontWeight =  this.value;
+    if(bold_txt.checked)  blk_contain.style.fontWeight =  this.value;
        else   blk_contain.style.fontWeight =  'initial';
   })
   
   let tbl_btn = getSel('.tbl_btn');
 
  curs_txt.addEventListener('change', function() {
-    if(curs_txt.checked) main_block.style.fontFamily =  this.value;
+    if(curs_txt.checked) blk_contain.style.fontFamily =  this.value;
 
        else   blk_contain.style.fontFamily =  'initial';
   })
