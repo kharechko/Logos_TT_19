@@ -103,13 +103,13 @@ let bd_col_btn = getSel('.bd_col_btn')
    
    let txt_family = getSel('.txt_family'); 
    txt_family.addEventListener('change', function() {
-    main_block.style.fontFamily = this.value;
+    blk_contain.style.fontFamily = this.value;
 })
 
 
 bold_txt.addEventListener('change', function() {
     if(bold_txt.checked)  main_block.style.fontWeight =  this.value;
-       else main_block.style.fontWeight =  'initial';
+       else   blk_contain.style.fontWeight =  'initial';
   })
   
   let tbl_btn = getSel('.tbl_btn');
@@ -117,7 +117,7 @@ bold_txt.addEventListener('change', function() {
  curs_txt.addEventListener('change', function() {
     if(curs_txt.checked) main_block.style.fontFamily =  this.value;
 
-       else main_block.style.fontFamily =  'initial';
+       else   blk_contain.style.fontFamily =  'initial';
   })
 
  tbl_btn.addEventListener(('click'), function() {
