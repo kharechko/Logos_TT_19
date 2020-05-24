@@ -2,11 +2,9 @@
 let getSel = n => document.querySelector(n);
 let addVis = n => n.classList.remove('non-visible');
 let deleteVis = n => n.classList.add('non-visible');
-
 let newTable = document.forms['newTableCreate'];
 let newList = document.forms['newListCreate'];
 let newStyle = document.forms['newStyle'];
-
 
 deleteVis(newTable);
 deleteVis(newList);
@@ -131,8 +129,11 @@ newTable.tbl_btn.addEventListener('click', function() {
       addVis(bottom_blk);
       addVis(main_btns);
       addVis(blk_contain);
-      tbl_contain = document.createElement('div');
-      deleteVis(tbl_contain)
+      let  tbl_contain = document.createElement('div');
+      let tbl = document.createElement('table')
+      let tbl_body = document.createElement('tbody');
+      let tbl_row;
+      deleteVis(tbl_contain);
     for(let i = 0; i < newTable.count_tr.value; i++){
         tbl_row = document.createElement('tr');
 
@@ -147,10 +148,10 @@ newTable.tbl_btn.addEventListener('click', function() {
                 tbl_col.style.borderColor = newTable.bd_color.options[newTable.bd_color.selectedIndex].value; 
                 tbl_row.appendChild(tbl_col);    
               }
-          table_cr.appendChild(tbl_row)
+              tbl_body.appendChild(tbl_row);
           }
-            blk_contain.appendChild(tbl_contain)
-            tbl_contain.appendChild(table_cr);
+            tbl.appendChild(tbl_body);
+            tbl_contain.appendChild(tbl);
             create_input.value += tbl_contain.innerHTML;
             deleteVis(newTable);
             deleteVis(lst_tbl_section);
@@ -166,13 +167,11 @@ let lst_btn = getSel('.lst_btn');
  })
 
     newList.lst_btn.addEventListener('click', function() {
-
        addVis(edit_section);
        addVis(bottom_blk);
        addVis(main_btns);
        addVis(blk_contain);
        let lst_contain = document.createElement('div');
-       lst_contain.style.paddingLeft = '10px';
        deleteVis(lst_contain)
         ul = document.createElement('ul');
             for(let i = 0; i < newList.count_li.value; i++) {
