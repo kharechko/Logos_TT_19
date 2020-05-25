@@ -1,16 +1,6 @@
 
-
 let arr = [1, 'string', [3, 4], 5, [6, 7]];
 
+let arr1 = arr.filter( n => Array.isArray(n));
 
-function arrFilter() {
-    let newArr = [];
-   
-    for(let i = 0; i < arr.length; i++) {
-        if(Array.isArray(arr[i]))    newArr.push(arr[i])
-    }
-    return  console.log(newArr)
-}
-
-
-arrFilter();
+console.log(arr1)
