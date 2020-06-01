@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+   
+<form action="" name="newForm">
+    <h1 style="font-family: monospace;">Please sign up</h1>
+    <label for="f_name">
+        <span class="plchldr plchldr1 ">First Name</span>
+        <input type="text" id="f_name" name="fname" class="inpt1" autocomplete="off">
+         <div class="invalidValue">Please provide a valid First name</div>
+         <div class="true_icon icon"><i class="fas fa-check"></i></div>
+         <div class="false_icon icon"><i class="fas fa-times"></i></div>
+    </label>
+    <label for="l_name">
+        <span class="plchldr2 plchldr">Last Name</span>
+        <input type="text"  id="l_name" name="lname" class="inpt2" autocomplete="off"> 
+        <div class="invalidValue">Please provide a valid first name</div>
+        <div class="true_icon icon"><i class="fas fa-check"></i></div>
+        <div class="false_icon icon"><i class="fas fa-times"></i></div>
+    </label>
+    <label for="email">
+        <span class="plchldr3 plchldr">Email address</span>
+        <input type="text" name="email" class="inpt3" autocomplete="off">
+        <div class="invalidValue">Please provide a valid email address</div>
+        <div class="true_icon icon"><i class="fas fa-check"></i></div>
+        <div class="false_icon icon"><i class="fas fa-times"></i></div>
+    </label>
+    <label  class="user_phone">
+        <span class="plchldr5 plchldr">Phone number</span>
+        <input type="tel" class='phone_mask inpt' id="phone" name="number" autocomplete="off"> 
+        <div class="true_icon icon"><i class="fas fa-check"></i></div>
+        <div class="false_icon icon"><i class="fas fa-times"></i></div>
+        <div class="invalidValue">Please provide a valid phone number</div>
+  </label>
+    <label for="pass">
+        <span class="plchldr4 plchldr">Password</span>
+        <input type="password" id="pass" name="password" class="inpt4" autocomplete="off">
+        <div class="invalidValue">Please provide a valid password</div>
+        <div class="true_icon icon"><i class="fas fa-check"></i></div>
+        <div class="false_icon icon"><i class="fas fa-times"></i></div>
+    </label>
+    <br>
+    <input type='submit' name="btn" value="SIGN UP">
+</form>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/inputmask.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/inputmask.extensions.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/inputmask.numeric.extensions.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/inputmask.date.extensions.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/inputmask.phone.extensions.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/jquery.inputmask.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/RobinHerbots/Inputmask@3.3.7/dist/inputmask/phone-codes/phone.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
