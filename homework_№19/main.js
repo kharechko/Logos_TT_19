@@ -3,7 +3,6 @@ const regName = /^[a-z]{1,20}$/i
 const regEmail = /^[a-z]+[\w,.-]+@\w+\.\w+$/;
 const regPassword = /^\w{8,20}$/i;
 const regNumber = /^\+380\(\d{2}\)\d{3}-\d{2}-\d{2}$/
-let invalidValue = document.querySelectorAll('.invalidValue')
 let true_icon = document.querySelectorAll('.true_icon')
 let false_icon = document.querySelectorAll('.false_icon')
 
