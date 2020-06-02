@@ -1,14 +1,12 @@
+
+let invalidValue = document.querySelectorAll('.invalidValue')
+let true_icon = document.querySelectorAll('.true_icon')
+let false_icon = document.querySelectorAll('.false_icon')
 const newForm = document.forms['newForm'];
 const regName = /^[a-z]{1,20}$/i
 const regEmail = /^[a-z]+[\w,.-]+@\w+\.\w+$/;
 const regPassword = /^\w{8,20}$/i;
 const regNumber = /^\+380\(\d{2}\)\d{3}-\d{2}-\d{2}$/
-let true_icon = document.querySelectorAll('.true_icon')
-let false_icon = document.querySelectorAll('.false_icon')
-
-invalidValue.forEach(n => n.classList.add('none'))
-true_icon.forEach(n => n.classList.add('none'))
-false_icon.forEach(n => n.classList.add('none'));
 
 $(function() {
   $('input[type="tel"]').inputmask({ alias: "phone", "clearIncomplete": true });
@@ -20,7 +18,6 @@ let toTop = function(n) {
   getSel(n).classList.add('toTop')
   getSel(n).classList.remove('plchldr')
 }
-
 getSel('.inpt1').addEventListener('focus', () => toTop('.plchldr1'))
 getSel('.inpt2').addEventListener('focus', () => toTop('.plchldr2'))
 getSel('.inpt3').addEventListener('focus', () => toTop('.plchldr3'))
@@ -53,5 +50,3 @@ newForm.addEventListener('submit', (e) => {
       validate(newForm.number, 3, regNumber);
       validate(newForm.password, 4, regPassword)
 })
-
-
