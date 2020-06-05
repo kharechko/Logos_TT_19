@@ -1,0 +1,348 @@
+       .main-steps {
+          @include displayFlex(row, space-evenly, wrap, center);
+          width: 90vw;
+          margin-top: 7%;
+          color: white;
+           &_block {
+            @include displayFlex(column, flex-end, wrap, center);
+            @include boxSize(300px, 400px);
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-bottom: 4%;
+            margin-left: auto;
+            background-size: cover;
+           }
+           &_block1 {
+            background: url(../assets/images/step1.jpg);
+           }
+           &_block2 {
+            background: url(../assets/images/step2.jpg);
+           }
+           &_block3 {
+            background: url(../assets/images/step3.jpg);
+           }
+           &_btn {
+            @include boxSize(70px, 20px);
+            outline: none;
+            border: 1px solid white;
+            color: white;
+            background-color: transparent;
+            letter-spacing: 2px;
+           }
+           &_subtitle {
+            margin-top: 2%;
+            font-size: 24px;
+            color: white;
+             white-space: pre-wrap;
+           }
+        }
+   
+   @media screen and (max-width: 768px) {
+          .main-steps{
+            margin: 7% 5vw;
+           }
+       .main-steps_block {
+            width: 220px; 
+          }
+   @media screen and (max-width: 320px) {
+          .main-steps {   
+              margin: 7% 3vw; 
+              @include justFlex(column);
+              height: 750px;
+              justify-content: space-between;
+             }
+         .main-steps_block {
+           @include boxSize(300px, 240px);
+         }  
+      }
+    
+        .main_subtitle {
+          @include text(1.3rem, $ser, rgba(0, 0, 0, .5));
+          margin-top: 3rem;
+          text-align: center;
+        }
+
+    @media screen and (max-width: 768px) {
+          .main-steps {
+            width: 90vw;
+          }
+          .main-steps_block {
+            width: 236px;
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+        
+   @media screen and (max-width: 340px) {
+          .main-steps {
+            @include justFlex(column);
+            height: 750px;
+            justify-content: space-between;
+          }
+          .main-steps_block {
+            @include boxSize(300px, 240px);
+          }
+          .main-steps_block1 {
+            background-image: url(../assets/images/step1.2.jpg);
+          }
+          .main-steps_block2 {
+            background-image: url(../assets/images/step2.2.jpg);
+          }
+          .main-steps_block3 {
+            background-image: url(../assets/images/step3.2.jpg);
+          }
+        }
+
+/*-----TEACHERS---*/
+
+.teachers{
+  margin-top: 60px;
+  text-align: center;
+   &_blk {
+    @include displayFlex(row, center, wrap, center);
+   }
+   &_img {
+    @include boxSize(100%, 190px);
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+   }
+   &_portrait {
+    border-radius: 50%;
+   }
+   &_name {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $curs;
+    line-height: 18px;
+    letter-spacing: 2px;
+     margin: 15px 0 0px;
+     color: $headTxt;
+   }
+   &_bio {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 20px;
+    color: #1a0101;
+    font-family: $ser;
+   }
+    
+   &_sp {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+   }
+   &_inst {
+    margin: 0 10px;
+   }
+  }
+
+  .main_subtitle {
+    font-family: $curs;
+    margin-bottom: 25px;
+  } 
+
+  .teachers_blk .teachers_member {
+    width: 250px;
+    margin: 5px;
+    padding: 20px 10px;
+  }
+
+  .teachers_blk .teachers_member .teachers_img .social_media {
+    @include displayFlex(row, center, wrap, center);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: $bgcolor;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: all 0.5s ease;
+ }
+ 
+    .teachers .fab {
+    color: white;
+    font-size: 1.6rem;
+}
+  
+  .teachers_blk .teachers_member .teachers_img:hover .social_media {
+            transform: scale(1);
+  }
+  
+  /*--------------------------Activities---------------------*/
+
+  .mdl-blk{
+    @include displayFlex(row, space-between, wrap, center);
+    width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    &_title {
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin-bottom: 4%;
+      font-family: $curs;
+      font-size: 1.25rem;
+    }
+    &_item {
+      height: 300px;
+      margin-top: 1.7%;
+    }
+     &_item1 {
+      background-image: url(../assets/images/sax.jpg);
+     }
+     &_item2 {
+      background-image: url(../assets/images/violin.jpg);
+     }
+     &_item3 {
+      background-image: url(../assets/images/trumpet.jpg);
+     }
+     &_item4 {
+      background-image: url(../assets/images/vocal.jpg);
+     }
+     &_item5 {
+      background-image: url(../assets/images/piano.jpg);
+     }
+     &_item6 {
+      background-image: url(../assets/images/drum.jpg);
+     }
+     &_item7 {
+      background-image: url(../assets/images/guitar.jpg);
+     }
+     &_top {
+       width: 300px;
+     }
+     &_bottom {
+       width: 620px;
+     }
+     &_descr {
+      @include displayFlex(row, center, wrap, center);
+      padding: 10px;
+      background-color: black;
+      opacity: 0.5;
+      color: white;
+     }
+  }
+
+      .mdl-blk_item:hover .mdl-blk_descr {
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+      @media screen and (max-width: 768px) {
+        .mdl-blk {
+          width: 96.5vw;
+          &_top{ 
+            width: 236px;
+          }
+          &_bottom {
+            width: 492px;
+          }
+        }
+      }
+       
+      @media screen and (max-width: 340px) {
+        .mdl-blk {
+          width: 98vw;
+          margin: 0 auto;
+            &_item {
+              width: 100vw;
+              height: 120px;
+            }
+             &_item1 {
+              background: url(../assets/images/sax2.jpg);
+             }
+             &_item2 {
+              background-image: url(../assets/images/violin2.jpg);
+             }
+             &_item3 {
+              background-image: url(../assets/images/trumpet2.jpg);
+             }
+             &_item4 {
+              background-image: url(../assets/images/vocal2.jpg);
+             }
+             &_item5 {
+              background-image: url(../assets/images/piano2.jpg);
+             }
+             &_item6{
+              background-image: url(../assets/images/drum2.jpg);
+             }
+             &_item7 {
+              background-image: url(../assets/images/guitar2.jpg);
+             }
+           }
+        }
+      }
+
+.form-section {
+  text-align: center;
+  width: 60%;
+  margin: 30px auto;
+    &_btn {
+    height: 40px;
+    margin-top: 30px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+   }
+    &_sumbit {
+    @include boxSize(40%, 3rem);
+    margin-top: 20px;
+    border: 1px solid black;
+    color: black;
+    font-family: $curs;
+    outline: none;
+    text-transform: uppercase;
+    background-color: white;
+   }
+   &_radio {
+    @include justFlex(row);
+    color: black;
+    font-family: $ser;
+    font-size: 0.8rem;
+    text-align: center;
+   }
+   &_submit {
+    @include boxSize(40%, 3rem);
+    margin-top: 20px;
+    border: 1px solid black;
+    color: black;
+    font-family: $curs;
+    outline: none;
+    text-transform: uppercase;
+    background-color: white;
+   }
+}
+       ::placeholder {
+        color: black;
+        font-size: 0.7rem;
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+      
+      label {
+        margin: 10px 10px;
+      }
+  
+      label::before {
+        content: '';
+        @include boxSize(30px, 30px);
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, 0.116);
+        border-radius: 50%;
+        z-index: 2;
+     }
+      
+      input:checked + label:before {
+        box-shadow: inset 0px 3px 0 2px white;
+        background: black;
+        border: none;
+      }
+      
+ 
+    

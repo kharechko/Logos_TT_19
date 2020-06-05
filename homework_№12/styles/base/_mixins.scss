@@ -1,0 +1,33 @@
+
+@mixin boxSize($wth, $hgt){
+    width: $wth;
+    height:$hgt
+}
+@mixin text($size, $family, $txtcolor){
+    font-size: $size;
+    font-family: $family;
+    color: $txtcolor;
+}
+
+@mixin flexDisplay($direction, $content, $wrap, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    flex-wrap: $wrap;
+    align-items: $align;
+}
+
+@mixin justFlex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin sml-letter {
+    font-size: .8rem;
+}
+
+@mixin linkStyle($color){
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: $color;
+}

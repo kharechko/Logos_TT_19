@@ -1,0 +1,748 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  cursor: pointer;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.header__link {
+  text-decoration: none;
+  color: black;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+  color: #a31212;
+}
+
+.header__btn:hover {
+  opacity: .6;
+}
+
+.nav-btn {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 1px;
+}
+
+.nav-bar {
+  font-size: 1rem;
+  position: absolute;
+  right: 10rem;
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 320px) {
+  .nav-bar {
+    display: none;
+  }
+}
+
+.header {
+  padding: 1rem;
+  height: 90vh;
+  background: url(../assets/images/main.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    background: url(../assets/images/main2.jpg);
+  }
+}
+
+.header__title {
+  margin-top: 15rem;
+  font-size: 4rem;
+  font-family: 'Dancing Script', cursive;
+  color: #bb1c1c;
+}
+
+@media screen and (max-width: 320px) {
+  .header__title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 8rem;
+  }
+}
+
+.header__btn {
+  margin-top: 20px;
+  width: 250px;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  border-radius: 3px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__btn {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header__btn {
+    height: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.main-steps {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 7%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: white;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+ .main-steps_block {
+  width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 4%;
+  margin-left: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-size: cover;
+}
+
+.main-steps_block1 {
+  background: url(../assets/images/step1.jpg);
+}
+
+.main-steps_block2 {
+  background: url(../assets/images/step2.jpg);
+}
+
+.main-steps_block3 {
+  background: url(../assets/images/step3.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  .main-steps {
+    margin: 7% 5vw;
+  }
+  .main-steps .main-steps_block {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .main-steps {
+    margin: 7% 3vw;
+  }
+  .main-steps .main-steps {
+    height: 750px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-steps .main-steps_block {
+    width: 300px;
+    height: 240px;
+  }
+}
+
+.main-steps_btn {
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  width: 70px;
+  background-color: transparent;
+  height: 20px;
+  letter-spacing: 2px;
+}
+
+.main-steps_subtitle {
+  margin-top: 2%;
+  font-size: 24px;
+  color: white;
+  white-space: pre-wrap;
+}
+
+.main_subtitle {
+  margin-top: 3rem;
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .main-steps {
+    width: 90vw;
+  }
+  .main-steps_block {
+    width: 236px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .main-steps {
+    height: 750px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-steps_block {
+    width: 300px;
+    height: 240px;
+  }
+  .main-steps_block1 {
+    background-image: url(../assets/images/step1.2.jpg);
+  }
+  .main-steps_block2 {
+    background-image: url(../assets/images/step2.2.jpg);
+  }
+  .main-steps_block3 {
+    background-image: url(../assets/images/step3.2.jpg);
+  }
+}
+
+/*-----TEACHERS---*/
+.teachers {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.main_subtitle {
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 25px;
+}
+
+.teachers_blk {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.teachers_blk .teachers_member {
+  width: 250px;
+  margin: 5px;
+  padding: 20px 10px;
+}
+
+.teachers_blk .teachers_member .teachers_img {
+  max-width: 190px;
+  width: 100%;
+  height: 190px;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.teachers_portrait {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.teachers_name {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: 'Dancing Script', cursive;
+  line-height: 18px;
+  letter-spacing: 2px;
+  margin: 15px 0 0px;
+  color: #a00707;
+}
+
+.teachers_bio {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 20px;
+  color: #1a0101;
+  font-family: 'Slabo 27px', serif;
+}
+
+.teachers_blk .teachers_member .teachers_img .social_media {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.35);
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.teachers_sp {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+}
+
+.teachers_blk .teachers_member .teachers_img .social_media .item {
+  margin: 0 10px;
+}
+
+.teachers_blk .teachers_member .teachers_img .social_media .fab {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.teachers_blk .teachers_member .teachers_img:hover .social_media {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/*--------------------------Activities---------------------*/
+.mdl-blk_title {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin-bottom: 4%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.25rem;
+}
+
+.mdl-blk {
+  width: 65vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.mdl-blk_item1 {
+  background-image: url(../assets/images/sax.jpg);
+}
+
+.mdl-blk_item2 {
+  background-image: url(../assets/images/violin.jpg);
+}
+
+.mdl-blk_item3 {
+  background-image: url(../assets/images/trumpet.jpg);
+}
+
+.mdl-blk_item4 {
+  background-image: url(../assets/images/vocal.jpg);
+}
+
+.mdl-blk_item5 {
+  background-image: url(../assets/images/piano.jpg);
+}
+
+.mdl-blk_item6 {
+  background-image: url(../assets/images/drum.jpg);
+}
+
+.mdl-blk_item7 {
+  background-image: url(../assets/images/guitar.jpg);
+}
+
+.mdl-blk_top {
+  width: 300px;
+}
+
+.mdl-blk_bottom {
+  width: 620px;
+}
+
+.mdl-blk_descr {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+}
+
+.mdl-blk_item {
+  height: 300px;
+  margin-top: 1.7%;
+}
+
+.mdl-blk_item:hover .mdl-blk_descr {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .mdl-blk_top {
+    width: 236px;
+  }
+  .mdl-blk_bottom {
+    width: 492px;
+  }
+  .mdl-blk {
+    width: 96.5vw;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .mdl-blk {
+    width: 98vw;
+    margin: 0 auto;
+  }
+  .mdl-blk_item1 {
+    background: url(../assets/images/sax2.jpg);
+  }
+  .mdl-blk_item2 {
+    background-image: url(../assets/images/violin2.jpg);
+  }
+  .mdl-blk_item3 {
+    background-image: url(../assets/images/trumpet2.jpg);
+  }
+  .mdl-blk_item4 {
+    background-image: url(../assets/images/vocal2.jpg);
+  }
+  .mdl-blk_item5 {
+    background-image: url(../assets/images/piano2.jpg);
+  }
+  .mdl-blk_item6 {
+    background-image: url(../assets/images/drum2.jpg);
+  }
+  .mdl-blk__item7 {
+    background-image: url(../assets/images/guitar2.jpg);
+  }
+  .mdl-blk_item {
+    width: 100vw;
+    height: 120px;
+  }
+}
+
+.form-section {
+  text-align: center;
+  width: 60%;
+  margin: 30px auto;
+}
+
+.form-section_btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  color: sienna;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+  font-size: 0.7rem;
+}
+
+:-ms-input-placeholder {
+  color: black;
+  font-size: 0.7rem;
+}
+
+::-ms-input-placeholder {
+  color: black;
+  font-size: 0.7rem;
+}
+
+::placeholder {
+  color: black;
+  font-size: 0.7rem;
+}
+
+.form-section_radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: black;
+  font-family: 'Slabo 27px', serif;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  margin: 10px 10px;
+}
+
+label:before {
+  content: '';
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.116);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+input:checked + label:before {
+  -webkit-box-shadow: inset 0px 3px 0 2px white;
+          box-shadow: inset 0px 3px 0 2px white;
+  background: black;
+  border: none;
+}
+
+.form-section_submit {
+  width: 40%;
+  margin-top: 20px;
+  height: 3rem;
+  border: 1px solid black;
+  color: black;
+  font-family: 'Dancing Script', cursive;
+  outline: none;
+  text-transform: uppercase;
+  background-color: white;
+  cursor: pointer;
+}
+
+.footer_content {
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 30px;
+}
+
+.footer_about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3%;
+  color: white;
+}
+
+.footer_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 30px;
+  color: white;
+  white-space: nowrap;
+}
+
+.footer-contact {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.footer_socials {
+  margin-top: 20px;
+  display: inline-block;
+  color: white;
+}
+
+.footer_link {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.footer_list {
+  list-style: none;
+}
+
+.footer_links {
+  display: inline-block;
+  margin-left: 10%;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.footer_logo {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.footer_main-link {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 340px) {
+  .footer_content {
+    height: 200px;
+  }
+  .footer_main-link {
+    font-size: .8rem;
+  }
+  .footer-contact {
+    font-size: .8rem;
+  }
+  .footer_link {
+    font-size: .8rem;
+  }
+  .footer_contact {
+    font-size: .8rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

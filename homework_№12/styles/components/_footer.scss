@@ -1,0 +1,73 @@
+  .footer {
+    &_content{
+      height: 300px;
+      background-color: black;
+      display: flex;
+      margin-bottom: 0;
+      padding-left: 30px;
+    }
+    &_about {
+      @include justFlex(column);
+      margin-top: 3%;
+      color: $iconCol;
+    }
+    &_contact {
+      @include displayFlex(column, space-between, nowrap, flex-start);
+      margin-top: 30px;
+      color: $iconCol;
+    }
+    &_socials {
+      margin-top: 20px;
+      display: inline-block;
+      color: $iconCol;
+    }
+    &_link {
+      @include linkStyle(white);
+      text-align: center;
+    }
+    &_list {
+      list-style: none;
+    }
+    &_links {
+      display: inline-block;
+      margin-left: 10%;
+      margin-top: 3%;
+      text-align: center;
+    }
+    &_logo {
+      font-family: $curs;
+      color: $iconCol;
+      font-size: 1.3rem;
+    }
+    &_main-link {
+      color: $iconCol;
+      font-size: 1.2rem;
+    }
+    &-contact {
+      margin-right: 10px;
+      font-size: 1.5rem;
+     }
+   }         
+                     
+   @media screen and (max-width: 320px) {
+   .footer_content {
+        height: 200px;
+   }
+   .footer_main-link{
+     @include sml-letter;
+   }
+  .contact{
+   @include sml-letter;
+ }
+  .footer_link{
+    @include sml-letter;
+  }
+ .footer_contact{
+   @include sml-letter;
+   }
+ }
+              
+
+ .footer_link:hover {
+  text-decoration: underline;
+ }
