@@ -1,0 +1,14 @@
+ body {
+     background-color: black;
+ }
+
+
+.ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    box-shadow: 0px 0px 60px yellow;
+}
+
