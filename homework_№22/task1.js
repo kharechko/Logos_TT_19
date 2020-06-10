@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
         $('.element').on('click',function(){
-            $('.element').addClass('s1', 1000).animate({
+            $('.element').animate({
             width: Math.floor(Math.random() * 400 + 10) +'px',
             height: Math.floor(Math.random() * 400 + 10) +'px',
             top: Math.floor(Math.random()*400) + 'px',
