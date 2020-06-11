@@ -1,0 +1,100 @@
+.accept {
+    width: 640px;
+    height: 480px;
+    background: lightgrey;
+    background-size: contain;
+}
+
+
+.container{
+    width: 640px;
+    height: 480px;
+    background-color: lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+body {
+    padding-top: 100px;
+    background: rgb(255, 255, 240);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 128px;
+    height: 120px;
+    background: url(minion.jpg);
+}
+
+.box1 {
+    background-position: 0 0;
+}
+
+.box2{
+    background-position: 512px 0;
+}
+.box3{
+    background-position: 384px  0;
+}
+
+.box4{
+    background-position: 256px 0;
+}
+.box5 {
+    background-position: 128px 0;
+}
+.box6 {
+    background-position: 0 360px;
+}
+
+.box7 {
+    background-position: 512px 360px;
+}
+
+.box8 {
+    background-position: 384px 360px;
+}
+
+.box9 {
+    background-position: 256px 360px;
+}
+.box10 {
+    background-position: 128px 360px;
+}
+
+.box11 {
+    background-position: 0 720px;
+}
+
+.box12 {
+    background-position: 512px 720px;
+}
+
+.box13 {
+    background-position: 384px 720px;
+}
+.box14 {
+    background-position: 256px 720px;
+}
+.box15 {
+    background-position: 128px 720px;
+}
+.box16 {
+    background-position: 0 1080px;
+}
+
+.box17 {
+    background-position: 512px 1080px;
+}
+
+.box18 {
+    background-position: 284px 1080px;
+}
+.box19 {
+    background-position: 256px 1080px;
+}
+.box20 {
+    background-position: 128px 1080px;
+}
