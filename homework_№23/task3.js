@@ -12,8 +12,9 @@ function updateCountDown() {
     txt =  setInterval (function() {
     count--
    $('.count').text(count)
-   if(count < 0) clearInterval(txt)
+   if(count <= 0) clearInterval(txt)
   }, 60000)  
+  
 }
   setTimeout(getAnimate, 100) 
   setTimeout(updateCountDown, 100)      
